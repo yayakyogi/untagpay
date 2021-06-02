@@ -1,0 +1,14 @@
+com/untagpay/MainActivity.java
+ com.untagpay.MainActivity
+com/untagpay/ReactNativeFlipper.java
+ com.untagpay.ReactNativeFlipper
+ com.untagpay.ReactNativeFlipper$1
+ com.untagpay.ReactNativeFlipper$2
+ com.untagpay.ReactNativeFlipper$2$1
+com/untagpay/MainApplication.java
+ com.untagpay.MainApplication
+ com.untagpay.MainApplication$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
+com/untagpay/BuildConfig.java
+ com.untagpay.BuildConfig
