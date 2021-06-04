@@ -1,9 +1,9 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import {Untagpay} from '../../assets';
-import {TextInput, Button, Gap} from '../../components';
+import {TextInput, Button, Gap, Or} from '../../components';
 
-const Login = () => {
+const Login = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.imgLogo}>
@@ -18,15 +18,25 @@ const Login = () => {
       />
       <Gap height={16} />
       <TextInput label="Password" placeholder="Masukkan password anda" />
-      <Text style={styles.forgotpass}>Lupa password?</Text>
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={() => navigation.navigate('ForgotPassword')}>
+        <Text style={styles.forgotpass}>Lupa password?</Text>
+      </TouchableOpacity>
       <Gap height={30} />
-      <Button btnName="LOGIN" />
-      <View style={styles.gap}>
-        <View style={styles.line} />
-        <Text style={styles.or}>Atau</Text>
-        <View style={styles.line} />
-      </View>
-      <Button btnName="DAFTAR" color="#ffffff" textColor="#E00120" />
+      <Button btnName="LOGIN" onPress={() => navigation.replace('MainApp')} />
+      <Or />
+      <Button
+        btnName="DAFTAR"
+        color="#ffffff"
+        textColor="#E00120"
+        onPress={() => navigation.navigate('Register')}
+      />
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={() => navigation.navigate('ForgotPassword')}>
+        <Text style={styles.needhelp}>Butuh bantuan?</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -35,20 +45,18 @@ export default Login;
 
 const styles = StyleSheet.create({
   container: {
+    paddingTop: 40,
     flex: 1,
-    justifyContent: 'center',
     paddingHorizontal: 35,
     backgroundColor: '#ffffff',
   },
   imgLogo: {alignItems: 'center'},
   title: {fontSize: 25, fontFamily: 'Poppins-Medium', color: '#C0392B'},
-  gap: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginVertical: 10,
+  forgotpass: {
+    textAlign: 'right',
+    color: '#8D92A3',
+    marginTop: 6,
+    fontSize: 12,
   },
-  line: {height: 1, width: 122, backgroundColor: '#c03928'},
-  or: {color: '#c03928', marginHorizontal: 10, fontFamily: 'Poppins-Medium'},
-  forgotpass: {textAlign: 'right', color: '#8D92A3', marginTop: 6},
+  needhelp: {textAlign: 'center', color: '#8D92A3', marginTop: 8, fontSize: 12},
 });
