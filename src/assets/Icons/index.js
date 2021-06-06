@@ -17,6 +17,10 @@ import IcBill from './IcBill.svg';
 import IcRefillable from './IcRefillable.svg';
 import IcGoride from './IcGoride.svg';
 import IcGodelivery from './IcGodelivery.svg';
+import user from './user.png';
+import user2 from './user2.png';
+import user3 from './user3.png';
+import IcCalender from './IcCalender.svg';
 
 export {
   IcHome,
@@ -38,4 +42,8 @@ export {
   IcRefillable,
   IcGoride,
   IcGodelivery,
+  user,
+  user2,
+  user3,
+  IcCalender,
 };

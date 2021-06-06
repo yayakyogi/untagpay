@@ -4,7 +4,16 @@ import Gap from './Gap';
 import Select from './Select';
 import Or from './Or';
 import Saldomenu from './Saldomenu';
-import Buttonmenu from './Buttonmenu';
+import Buttonmenufloating from './Buttonmenufloating';
 import Imagepromo from './Imagepromo';
 
-export {TextInput, Button, Gap, Select, Or, Saldomenu, Buttonmenu, Imagepromo};
+export {
+  TextInput,
+  Button,
+  Gap,
+  Select,
+  Or,
+  Saldomenu,
+  Buttonmenufloating,
+  Imagepromo,
+};

@@ -7,6 +7,8 @@ import Messagepage from './Messagepage';
 import Scanpage from './Scanpage';
 import Historypage from './Historypage';
 import Accountpage from './Accountpage';
+import OnDeveloping from './OnDeveloping';
+import Payments from './Payments';
 
 export {
   SplashScreen,
@@ -18,4 +20,6 @@ export {
   Scanpage,
   Historypage,
   Accountpage,
+  OnDeveloping,
+  Payments,
 };

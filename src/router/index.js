@@ -11,6 +11,8 @@ import {
   Scanpage,
   Historypage,
   Accountpage,
+  OnDeveloping,
+  Payments,
 } from '../pages';
 import MainApp from './BottomTabNavigator';
 
@@ -50,6 +52,14 @@ const Router = () => {
       <Stack.Screen
         name="MainApp"
         component={MainApp}
+        options={{headerShown: false}}></Stack.Screen>
+      <Stack.Screen
+        name="OnDeveloping"
+        component={OnDeveloping}
+        options={{headerShown: false}}></Stack.Screen>
+      <Stack.Screen
+        name="Payments"
+        component={Payments}
         options={{headerShown: false}}></Stack.Screen>
     </Stack.Navigator>
   );

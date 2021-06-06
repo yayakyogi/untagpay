@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
-const MenuButton = ({icon, label, onPress}) => {
+const MenuButtonHomepage = ({icon, label, onPress}) => {
   return (
     <TouchableOpacity activeOpacity={0.7} onPress={onPress}>
       <View style={styles.container}>
@@ -12,7 +12,7 @@ const MenuButton = ({icon, label, onPress}) => {
   );
 };
 
-export default MenuButton;
+export default MenuButtonHomepage;
 
 const styles = StyleSheet.create({
   container: {alignItems: 'center', width: 80},

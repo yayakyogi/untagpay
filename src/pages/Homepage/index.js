@@ -6,17 +6,19 @@ import {
   Image,
   TouchableOpacity,
   ScrollView,
+  StatusBar,
 } from 'react-native';
 import {
   HeaderHomepage,
   FloatingMenu,
   TitleMenu,
   MenuPromo,
-  MenuButton,
+  MenuButtonHomepage,
   Gap,
   Button,
   Saldomenu,
-  Buttonmenu,
+  Buttonmenufloating,
+  Imagepromo,
 } from '../../components';
 import {
   IcAddSaldo,
@@ -29,75 +31,129 @@ import {
   IcGodelivery,
   IcScanFloat,
   IcTransactionFloat,
+  Promo_1,
+  Promo_2,
 } from '../../assets';
 
 const Homepage = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <HeaderHomepage />
+      <StatusBar backgroundColor="#E00120" />
+      <HeaderHomepage
+        onPressuser={() => navigation.navigate('Login')}
+        onPressnotif={() => navigation.navigate('Register')}
+      />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.body}>
+          {/* Floating menu */}
           <View style={styles.floatMenu}>
             <View style={styles.floatMenuContainer}>
               <Text style={styles.textWelcome}>Selamat Datang, Yayak</Text>
               <Gap height={10} />
-              <View style={styles.menu}>
+              <View style={styles.bodyFloatinmenu}>
                 <Saldomenu />
                 <View style={styles.btnFloatMenu}>
-                  <Buttonmenu
+                  <Buttonmenufloating
                     icon={<IcScanFloat />}
                     label="Scand QR"
-                    onPress={({OnPress}) => navigation.navigate('Login')}
+                    onPress={() => navigation.navigate('OnDeveloping')}
                   />
                   <Gap width={10} />
-                  <Buttonmenu
+                  <Buttonmenufloating
                     icon={<IcTransactionFloat />}
                     label="Transaksi"
-                    onPress={({OnPress}) => navigation.navigate('Register')}
+                    onPress={() => navigation.navigate('OnDeveloping')}
                   />
                 </View>
               </View>
             </View>
           </View>
           <Gap height={15} />
+
+          {/* Menu Promo */}
           <View style={styles.menuPromo}>
-            <MenuPromo />
+            <TitleMenu
+              title="Promo & Diskon"
+              seeAll={() => {}}
+              onPress={() => navigation.navigate('OnDeveloping')}
+            />
+            <Gap height={20} />
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+              <Imagepromo img={Promo_1} />
+              <Imagepromo img={Promo_1} />
+            </ScrollView>
           </View>
           <Gap height={30} />
+
           {/* E-Wallet */}
           <View style={styles.menu}>
             <TitleMenu
               title="E-Wallet"
               seeAll={() => {}}
-              onPress={() => navigation.replace('Login')}
+              onPress={() => navigation.navigate('OnDeveloping')}
             />
             <View style={styles.listButton}>
-              <MenuButton icon={<IcAddSaldo />} label="Tambah Saldo" />
-              <MenuButton
+              <MenuButtonHomepage
+                icon={<IcAddSaldo />}
+                label="Tambah Saldo"
+                onPress={() => navigation.navigate('OnDeveloping')}
+              />
+              <MenuButtonHomepage
                 icon={<IcLogTransaction />}
                 label="Riwayat Transaksi"
+                onPress={() => navigation.navigate('OnDeveloping')}
               />
-              <MenuButton icon={<IcTransfer />} label="Transfer" />
+              <MenuButtonHomepage
+                icon={<IcTransfer />}
+                label="Transfer"
+                onPress={() => navigation.navigate('OnDeveloping')}
+              />
             </View>
           </View>
           <Gap height={30} />
+
           {/* Pembayaran */}
           <View style={styles.menu}>
-            <TitleMenu title="Pembayaran" seeAll={() => {}} />
+            <TitleMenu
+              title="Pembayaran"
+              seeAll={() => {}}
+              onPress={() => navigation.navigate('OnDeveloping')}
+            />
             <View style={styles.listButton}>
-              <MenuButton icon={<IcPayment />} label="Pembayaran Kuliah" />
-              <MenuButton icon={<IcBill />} label="Tagihan & Pascabayar" />
-              <MenuButton icon={<IcRefillable />} label="Isi Ulang Pulsa" />
+              <MenuButtonHomepage
+                icon={<IcPayment />}
+                label="Pembayaran Kuliah"
+                onPress={() => navigation.navigate('Payments')}
+              />
+              <MenuButtonHomepage
+                icon={<IcBill />}
+                label="Tagihan & Pascabayar"
+                onPress={() => navigation.navigate('OnDeveloping')}
+              />
+              <MenuButtonHomepage
+                icon={<IcRefillable />}
+                label="Isi Ulang Pulsa"
+                onPress={() => navigation.navigate('OnDeveloping')}
+              />
             </View>
           </View>
           <Gap height={30} />
+
           {/* Treansportasi */}
           <View style={styles.menu}>
             <TitleMenu title="Transportasi" />
             <View style={styles.listButtonTrasportasi}>
-              <MenuButton icon={<IcGoride />} label="Go-Ride" />
+              <MenuButtonHomepage
+                icon={<IcGoride />}
+                label="Go-Ride"
+                onPress={() => navigation.navigate('OnDeveloping')}
+              />
               <Gap width={50} />
-              <MenuButton icon={<IcGodelivery />} label="Go-Delivery" />
+              <MenuButtonHomepage
+                icon={<IcGodelivery />}
+                label="Go-Delivery"
+                onPress={() => navigation.navigate('OnDeveloping')}
+              />
             </View>
           </View>
           <Gap height={50} />
@@ -158,7 +214,7 @@ const styles = StyleSheet.create({
     borderColor: '#D7CDCD',
   },
   textWelcome: {fontFamily: 'Poppins-Medium', fontSize: 14, color: '#E00120'},
-  menu: {
+  bodyFloatinmenu: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',

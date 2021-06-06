@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import Gap from '../Gap';
 
-const Buttonmenu = ({icon, label, onPress}) => {
+const Buttonmenufloating = ({icon, label, onPress}) => {
   return (
     <TouchableOpacity activeOpacity={0.7} onPress={onPress}>
       <View style={styles.btn}>
@@ -14,7 +14,7 @@ const Buttonmenu = ({icon, label, onPress}) => {
   );
 };
 
-export default Buttonmenu;
+export default Buttonmenufloating;
 
 const styles = StyleSheet.create({
   btn: {

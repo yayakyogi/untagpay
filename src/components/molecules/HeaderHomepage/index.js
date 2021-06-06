@@ -1,16 +1,23 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {BrandHomepage, IcUser, IcNotification} from '../../../assets';
+import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
+import {BrandHomepage, user, IcNotification} from '../../../assets';
 
-const HeaderHomepage = () => {
+const HeaderHomepage = ({onPressnotif, onPressuser}) => {
   return (
     <View style={styles.container}>
       <BrandHomepage />
       <View style={styles.user}>
-        <IcNotification />
-        <View style={styles.borderUser}>
-          <IcUser />
-        </View>
+        <TouchableOpacity activeOpacity={0.7} onPress={onPressnotif}>
+          <IcNotification />
+        </TouchableOpacity>
+        <TouchableOpacity activeOpacity={0.7} onPress={onPressuser}>
+          <View style={styles.borderUser}>
+            <Image
+              source={user}
+              style={{width: 38, height: 38, borderRadius: 50}}
+            />
+          </View>
+        </TouchableOpacity>
       </View>
     </View>
   );

@@ -1,17 +1,17 @@
 import Header from './Header';
-import BottomNavigator from './BottomNavigator';
 import HeaderHomepage from './HeaderHomepage';
-import FloatingMenu from './FloatingMenu';
 import TitleMenu from './TitleMenu';
-import MenuPromo from './MenuPromo';
-import MenuButton from './MenuButton';
+import MenuButtonHomepage from './MenuButtonHomepage';
+import MenuMessage from './MenuMessage';
+import MenuHistoryPage from './MenuHistorypage';
+import HeaderPayment from './HeaderPayment';
 
 export {
   Header,
-  BottomNavigator,
   HeaderHomepage,
-  FloatingMenu,
   TitleMenu,
-  MenuPromo,
-  MenuButton,
+  MenuButtonHomepage,
+  MenuMessage,
+  MenuHistoryPage,
+  HeaderPayment,
 };

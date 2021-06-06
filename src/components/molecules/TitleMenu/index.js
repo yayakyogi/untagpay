@@ -1,12 +1,12 @@
 import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
-const TitleMenu = ({title, seeAll}) => {
+const TitleMenu = ({title, seeAll, onPress}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textTitle}>{title}</Text>
       {seeAll && (
-        <TouchableOpacity activeOpacity={0.7}>
+        <TouchableOpacity activeOpacity={0.7} onPress={onPress}>
           <View style={styles.btnMenu}>
             <Text style={styles.btnText}>Lihat semua</Text>
           </View>
