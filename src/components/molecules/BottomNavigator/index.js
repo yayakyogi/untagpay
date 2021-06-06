@@ -91,14 +91,14 @@ const BottomNavigator = ({state, descriptors, navigation}) => {
               <View style={styles.icScan}>
                 <Icon label={label} focus={isFocused} />
               </View>
-              <Text
+              {/* <Text
                 style={{
                   color: isFocused ? '#C0392B' : '#AAA69D',
                   fontFamily: 'Poppins-Regular',
                   fontSize: 13,
                 }}>
                 {label}
-              </Text>
+              </Text> */}
             </TouchableOpacity>
           );
         } else {
@@ -114,7 +114,7 @@ const BottomNavigator = ({state, descriptors, navigation}) => {
               onLongPress={onLongPress}
               style={styles.buttonTab}>
               <Icon label={label} focus={isFocused} />
-              <Text
+              {/* <Text
                 style={{
                   color: isFocused ? '#C0392B' : '#AAA69D',
                   fontFamily: 'Poppins-Regular',
@@ -122,7 +122,7 @@ const BottomNavigator = ({state, descriptors, navigation}) => {
                   marginTop: 3,
                 }}>
                 {label}
-              </Text>
+              </Text> */}
             </TouchableOpacity>
           );
         }
@@ -137,7 +137,10 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'flex-end',
+    alignItems: 'center',
+    backgroundColor: '#ffffff',
+    borderTopWidth: 1,
+    borderColor: '#ecf0f1',
   },
   buttonTab: {
     flex: 1,
@@ -151,15 +154,15 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 50,
     backgroundColor: '#ffffff',
     alignItems: 'center',
-    paddingBottom: 7,
+    paddingBottom: 5,
   },
-  icScan: {
-    borderRadius: 50,
-    borderWidth: 1,
-    borderColor: '#ecf0f1',
-    paddingTop: 10,
-    paddingBottom: 7,
-    paddingHorizontal: 8,
-  },
+  // icScan: {
+  //   borderRadius: 50,
+  //   borderWidth: 1,
+  //   borderColor: '#ecf0f1',
+  //   paddingTop: 10,
+  //   paddingBottom: 7,
+  //   paddingHorizontal: 8,
+  // },
   bodyScan: {backgroundColor: '#C0392B', borderRadius: 50, padding: 10},
 });

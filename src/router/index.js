@@ -12,22 +12,22 @@ import {
   Historypage,
   Accountpage,
 } from '../pages';
-import {BottomNavigator} from '../components';
+import MainApp from './BottomTabNavigator';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-const MainApp = () => {
-  return (
-    <Tab.Navigator tabBar={props => <BottomNavigator {...props} />}>
-      <Tab.Screen name="Beranda" component={Homepage} />
-      <Tab.Screen name="Pesan" component={Messagepage} />
-      <Tab.Screen name="Scan" component={Scanpage} />
-      <Tab.Screen name="Riwayat" component={Historypage} />
-      <Tab.Screen name="Akun" component={Accountpage} />
-    </Tab.Navigator>
-  );
-};
+// const MainApp = () => {
+//   return (
+//     <Tab.Navigator tabBar={props => <BottomNavigator {...props} />}>
+//       <Tab.Screen name="Beranda" component={Homepage} />
+//       <Tab.Screen name="Pesan" component={Messagepage} />
+//       <Tab.Screen name="Scan" component={Scanpage} />
+//       <Tab.Screen name="Riwayat" component={Historypage} />
+//       <Tab.Screen name="Akun" component={Accountpage} />
+//     </Tab.Navigator>
+//   );
+// };
 const Router = () => {
   return (
     <Stack.Navigator>

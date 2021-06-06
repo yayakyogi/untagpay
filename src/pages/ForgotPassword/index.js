@@ -14,6 +14,7 @@ const ForgotPassword = ({navigation}) => {
       <Header
         title="Lupa Password"
         onPress={() => navigation.navigate('Login')}
+        onBack={() => {}}
       />
       <View style={styles.bodyContainer}>
         <ScrollView showsVerticalScrollIndicator={false}>
