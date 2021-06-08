@@ -5,6 +5,9 @@ import MenuButtonHomepage from './MenuButtonHomepage';
 import MenuMessage from './MenuMessage';
 import MenuHistoryPage from './MenuHistorypage';
 import HeaderPayment from './HeaderPayment';
+import PaymentKuliahUkt from './PaymentKuliahUkt';
+import PaymentKuliahLainnya from './PaymentKuliahLainnya';
+import ListDataTransaction from './ListDataTransaction';
 
 export {
   Header,
@@ -14,4 +17,7 @@ export {
   MenuMessage,
   MenuHistoryPage,
   HeaderPayment,
+  PaymentKuliahUkt,
+  PaymentKuliahLainnya,
+  ListDataTransaction,
 };

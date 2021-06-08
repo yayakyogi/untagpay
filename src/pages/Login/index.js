@@ -15,20 +15,21 @@ const Login = ({navigation}) => {
   const [password, setPassword] = useState('');
 
   const onSubmit = () => {
-    console.log('email', email);
-    console.log('passowrd', password);
-    if (email && password) {
-      if (email == 'untagpay' && password == '12345678') {
-        navigation.replace('MainApp');
-      } else {
-        console.log('gagal');
-        Alert.alert('Username atau password salah');
-        setEmail('');
-        setPassword('');
-      }
-    } else {
-      Alert.alert('Kolom wajib diisi');
-    }
+    navigation.replace('MainApp');
+    // console.log('email', email);
+    // console.log('passowrd', password);
+    // if (email && password) {
+    //   if (email == 'untagpay' && password == '12345678') {
+    //     navigation.replace('MainApp');
+    //   } else {
+    //     console.log('gagal');
+    //     Alert.alert('Username atau password salah');
+    //     setEmail('');
+    //     setPassword('');
+    //   }
+    // } else {
+    //   Alert.alert('Kolom wajib diisi');
+    // }
   };
   return (
     <View style={styles.container}>
@@ -66,9 +67,7 @@ const Login = ({navigation}) => {
         textColor="#E00120"
         onPress={() => navigation.navigate('Register')}
       />
-      <TouchableOpacity
-        activeOpacity={0.7}
-        onPress={() => navigation.navigate('ForgotPassword')}>
+      <TouchableOpacity activeOpacity={0.7} onPress={() => {}}>
         <Text style={styles.needhelp}>Butuh bantuan?</Text>
       </TouchableOpacity>
     </View>

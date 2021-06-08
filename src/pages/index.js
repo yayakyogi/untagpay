@@ -8,7 +8,10 @@ import Scanpage from './Scanpage';
 import Historypage from './Historypage';
 import Accountpage from './Accountpage';
 import OnDeveloping from './OnDeveloping';
-import Payments from './Payments';
+import Payments_Kuliah from './Payments_Kuliah';
+import Payments_Checkout from './Payments_Checkout';
+import Payments_Autentication from './Payments_Autentication';
+import Payments_Success from './Payments_Success';
 
 export {
   SplashScreen,
@@ -21,5 +24,8 @@ export {
   Historypage,
   Accountpage,
   OnDeveloping,
-  Payments,
+  Payments_Kuliah,
+  Payments_Checkout,
+  Payments_Autentication,
+  Payments_Success,
 };

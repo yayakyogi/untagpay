@@ -14,8 +14,7 @@ const Select = () => {
           // }
           style={{marginTop: -2, height: 52}}>
           <Picker.Item label="-- Pilih --" />
-          <Picker.Item label="Universitas 17 Agustus Surabaya" value="java" />
-          <Picker.Item label="Universitas Narotama" value="js" />
+          <Picker.Item label="Universitas 17 Agustus Surabaya" value="010101" />
         </Picker>
       </View>
     </View>

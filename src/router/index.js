@@ -12,7 +12,10 @@ import {
   Historypage,
   Accountpage,
   OnDeveloping,
-  Payments,
+  Payments_Kuliah,
+  Payments_Checkout,
+  Payments_Autentication,
+  Payments_Success,
 } from '../pages';
 import MainApp from './BottomTabNavigator';
 
@@ -58,8 +61,20 @@ const Router = () => {
         component={OnDeveloping}
         options={{headerShown: false}}></Stack.Screen>
       <Stack.Screen
-        name="Payments"
-        component={Payments}
+        name="Payments_Kuliah"
+        component={Payments_Kuliah}
+        options={{headerShown: false}}></Stack.Screen>
+      <Stack.Screen
+        name="Payments_Checkout"
+        component={Payments_Checkout}
+        options={{headerShown: false}}></Stack.Screen>
+      <Stack.Screen
+        name="Payments_Autentication"
+        component={Payments_Autentication}
+        options={{headerShown: false}}></Stack.Screen>
+      <Stack.Screen
+        name="Payments_Success"
+        component={Payments_Success}
         options={{headerShown: false}}></Stack.Screen>
     </Stack.Navigator>
   );

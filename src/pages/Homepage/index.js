@@ -123,7 +123,7 @@ const Homepage = ({navigation}) => {
               <MenuButtonHomepage
                 icon={<IcPayment />}
                 label="Pembayaran Kuliah"
-                onPress={() => navigation.navigate('Payments')}
+                onPress={() => navigation.navigate('Payments_Kuliah')}
               />
               <MenuButtonHomepage
                 icon={<IcBill />}
@@ -133,25 +133,6 @@ const Homepage = ({navigation}) => {
               <MenuButtonHomepage
                 icon={<IcRefillable />}
                 label="Isi Ulang Pulsa"
-                onPress={() => navigation.navigate('OnDeveloping')}
-              />
-            </View>
-          </View>
-          <Gap height={30} />
-
-          {/* Treansportasi */}
-          <View style={styles.menu}>
-            <TitleMenu title="Transportasi" />
-            <View style={styles.listButtonTrasportasi}>
-              <MenuButtonHomepage
-                icon={<IcGoride />}
-                label="Go-Ride"
-                onPress={() => navigation.navigate('OnDeveloping')}
-              />
-              <Gap width={50} />
-              <MenuButtonHomepage
-                icon={<IcGodelivery />}
-                label="Go-Delivery"
                 onPress={() => navigation.navigate('OnDeveloping')}
               />
             </View>

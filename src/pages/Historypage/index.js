@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Header, MenuHistoryPage} from '../../components';
-import {IcCalender, IcAddSaldo} from '../../assets';
+import {IcUkt, IcAddSaldo} from '../../assets';
 
 const Historypage = () => {
   return (
@@ -9,7 +9,7 @@ const Historypage = () => {
       <Header title="Riwayat" />
       <View style={styles.listHistory}>
         <MenuHistoryPage
-          icon={<IcCalender />}
+          icon={<IcUkt />}
           transaksi="Pembayaran Kuliah | UKT/SPP "
           nominal="Rp 500.000"
           date="1/06/2020"

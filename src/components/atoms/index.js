@@ -6,6 +6,7 @@ import Or from './Or';
 import Saldomenu from './Saldomenu';
 import Buttonmenufloating from './Buttonmenufloating';
 import Imagepromo from './Imagepromo';
+import Buttonbayar from './Buttonbayar';
 
 export {
   TextInput,
@@ -16,4 +17,5 @@ export {
   Saldomenu,
   Buttonmenufloating,
   Imagepromo,
+  Buttonbayar,
 };
